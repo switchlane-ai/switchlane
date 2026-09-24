@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: Switchlane API
   description: Runtime routing for multi-agent systems
-  version: 0.1.0
+  version: 0.1.2
   contact:
     url: https://router.troialabs.ai
 

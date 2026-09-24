@@ -92,10 +92,10 @@ except SwitchlaneError as error:
 
 ## Links
 
-- [Server and documentation](https://github.com/troailabs/switchlane)
-- [OpenAPI specification](https://github.com/troailabs/switchlane/blob/main/openapi.yaml)
-- [Issues](https://github.com/troailabs/switchlane/issues)
+- [Server and documentation](https://github.com/switchlane-ai/switchlane)
+- [OpenAPI specification](https://github.com/switchlane-ai/switchlane/blob/main/openapi.yaml)
+- [Issues](https://github.com/switchlane-ai/switchlane/issues)
 
 ## License
 
-MIT © Troia Labs. The Switchlane server is licensed separately under AGPL-3.0-only.
+MIT © Ekrem Aksoy. The Switchlane server is licensed separately under AGPL-3.0-only.

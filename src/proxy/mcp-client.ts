@@ -19,7 +19,7 @@ export async function callMcpTool(
   timeoutMs: number = 30000
 ): Promise<McpCallResult> {
   const start = Date.now();
-  const client = new Client({ name: 'switchlane-proxy', version: '0.1.0' });
+  const client = new Client({ name: 'switchlane-proxy', version: '0.1.2' });
 
   try {
     // Connect to MCP server
@@ -60,7 +60,7 @@ export async function callMcpTool(
  * Discover tools available on an MCP server.
  */
 export async function listMcpTools(serverUrl: string): Promise<{ name: string; description?: string }[]> {
-  const client = new Client({ name: 'switchlane-discovery', version: '0.1.0' });
+  const client = new Client({ name: 'switchlane-discovery', version: '0.1.2' });
 
   try {
     const transport = new StreamableHTTPClientTransport(new URL(serverUrl));

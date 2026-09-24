@@ -1,18 +1,18 @@
 {
   "name": "switchlane-server",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Runtime routing for multi-agent systems",
   "private": true,
   "type": "module",
   "license": "AGPL-3.0-only",
-  "author": "Troia Labs",
+  "author": "Ekrem Aksoy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/troailabs/switchlane.git"
+    "url": "https://github.com/switchlane-ai/switchlane.git"
   },
   "homepage": "https://router.troialabs.ai",
   "bugs": {
-    "url": "https://github.com/troailabs/switchlane/issues"
+    "url": "https://github.com/switchlane-ai/switchlane/issues"
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",

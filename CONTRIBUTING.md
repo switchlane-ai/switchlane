@@ -5,7 +5,7 @@ Thanks for your interest in contributing! Here's how to get started.
 ## Development Setup
 
 ```bash
-git clone https://github.com/troailabs/switchlane.git
+git clone https://github.com/switchlane-ai/switchlane.git
 cd switchlane
 npm install
 docker compose up -d
@@ -33,9 +33,9 @@ npm run dev
 
 ## Reporting Issues
 
-- Use [GitHub Issues](https://github.com/troailabs/switchlane/issues)
+- Use [GitHub Issues](https://github.com/switchlane-ai/switchlane/issues)
 - Include steps to reproduce, expected behavior, and actual behavior
-- For security issues, email security@troialabs.ai instead of opening a public issue
+- For security issues, email ekremaksoy@gmail.com instead of opening a public issue
 
 ## Pull Requests
 

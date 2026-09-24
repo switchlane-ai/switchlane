@@ -1,6 +1,6 @@
 # Switchlane
 
-[![CI](https://github.com/troailabs/switchlane/actions/workflows/ci.yml/badge.svg)](https://github.com/troailabs/switchlane/actions/workflows/ci.yml)
+[![CI](https://github.com/switchlane-ai/switchlane/actions/workflows/ci.yml/badge.svg)](https://github.com/switchlane-ai/switchlane/actions/workflows/ci.yml)
 
 **Runtime routing for multi-agent systems** — send a task, select the best eligible agent.
 
@@ -40,7 +40,7 @@ Task → Schema Match (pgvector) → Rank → Response
 No signup, API key, registry crawl, or external LLM is required:
 
 ```bash
-git clone https://github.com/troailabs/switchlane.git
+git clone https://github.com/switchlane-ai/switchlane.git
 cd switchlane
 npm run demo
 ```
@@ -51,7 +51,7 @@ The demo builds an isolated Docker stack, applies migrations, seeds eight purpos
 
 ```bash
 # Clone
-git clone https://github.com/troailabs/switchlane.git
+git clone https://github.com/switchlane-ai/switchlane.git
 cd switchlane
 
 # Start PostgreSQL (pgvector) and Redis
@@ -255,4 +255,4 @@ The Switchlane server is licensed under [GNU AGPL v3](LICENSE). The TypeScript
 SDK in [sdk/](sdk/) and Python SDK in [python/](python/) are licensed separately
 under the MIT License.
 
-Copyright © 2026 Troia Labs.
+Copyright © 2026 Ekrem Aksoy.
