@@ -88,8 +88,8 @@ billingRouter.post('/upgrade', async (c) => {
           recurring: { interval: 'month' },
         },
       }],
-      success_url: 'https://router.troialabs.ai/billing/success',
-      cancel_url: 'https://router.troialabs.ai/billing/cancel',
+      success_url: 'https://switchlane.ai/billing/success',
+      cancel_url: 'https://switchlane.ai/billing/cancel',
     });
 
     return c.json({ checkout_url: session.url });

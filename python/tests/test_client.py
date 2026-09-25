@@ -28,13 +28,15 @@ ROUTE_RESPONSE = {
 }
 
 
-def test_sync_route_parses_abstention_and_sends_auth() -> None:
+@pytest.mark.parametrize("base_url", [None, "https://example.test/"])
+def test_sync_route_parses_abstention_and_sends_auth(base_url: str | None) -> None:
     def handler(request: httpx.Request) -> httpx.Response:
         assert request.headers["Authorization"] == "Bearer sl_live_test"
-        assert request.url.path == "/v1/route"
+        assert str(request.url) == f"{(base_url or 'https://switchlane.ai').rstrip('/')}/v1/route"
         return httpx.Response(200, json=ROUTE_RESPONSE)
 
-    with Switchlane("sl_live_test", base_url="https://example.test", transport=httpx.MockTransport(handler)) as client:
+    options = {"base_url": base_url} if base_url is not None else {}
+    with Switchlane("sl_live_test", transport=httpx.MockTransport(handler), **options) as client:
         result = client.route("unknown task")
 
     assert result.meta.abstained is True
@@ -51,16 +53,18 @@ def test_sync_errors_include_status_and_body() -> None:
     assert caught.value.body == {"error": "Invalid API key"}
 
 
-def test_async_route() -> None:
+@pytest.mark.parametrize("base_url", [None, "https://example.test/"])
+def test_async_route(base_url: str | None) -> None:
     async def run() -> None:
         async def handler(request: httpx.Request) -> httpx.Response:
-            assert request.url.path == "/v1/route"
+            assert str(request.url) == f"{(base_url or 'https://switchlane.ai').rstrip('/')}/v1/route"
             return httpx.Response(200, json=ROUTE_RESPONSE)
 
+        options = {"base_url": base_url} if base_url is not None else {}
         async with AsyncSwitchlane(
             "sl_live_test",
-            base_url="https://example.test",
             transport=httpx.MockTransport(handler),
+            **options,
         ) as client:
             result = await client.route("unknown task")
         assert result.meta.confidence is None

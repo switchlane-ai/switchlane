@@ -13,7 +13,7 @@ from .models import (
     UsageResponse,
 )
 
-DEFAULT_BASE_URL = "https://router.troialabs.ai"
+DEFAULT_BASE_URL = "https://switchlane.ai"
 
 
 class SwitchlaneError(Exception):

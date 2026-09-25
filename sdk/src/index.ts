@@ -99,7 +99,7 @@ export class Switchlane {
 
   constructor(config: SwitchlaneConfig) {
     this.apiKey = config.apiKey;
-    this.baseUrl = (config.baseUrl || 'https://router.troialabs.ai').replace(/\/$/, '');
+    this.baseUrl = (config.baseUrl || 'https://switchlane.ai').replace(/\/$/, '');
   }
 
   private async request<T>(method: string, path: string, body?: unknown): Promise<T> {
